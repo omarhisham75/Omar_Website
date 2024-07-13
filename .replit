@@ -1,5 +1,5 @@
 run = "python app.py"
-modules = ["python-with-prybar-3.10", "python-3.9"]
+modules = ["python-3.12"]
 [nix]
 channel = "stable-24_05"
 
