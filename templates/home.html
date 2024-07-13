@@ -7,17 +7,22 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
       #banner {
-        height: 600px;
+        height: 330px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 40px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://cf5b9ce2-1358-4574-b501-6e73f755107c-00-1p1roun3817r2.janeway.replit.dev//static/banner.jpg">
     <div class="container">
       <h1 class="text-center mt-2 mb-4">Welcome to my website!</h1> 
-      <img class="img-fluid" id="banner" src="https://cf5b9ce2-1358-4574-b501-6e73f755107c-00-1p1roun3817r2.janeway.replit.dev//static/banner.jpg"  >
-      <h2 class="text-center mt-2 mb-4"> About Omar Hisham </h2>
+
+      <h2 class="text-center mt-2 mb-4"> About Me </h2>
+      <div class="row" style="margin-bottom: 16px;">
+        <div class="col-md-6">
       <p class="lead">
         I am Omar Hisham, a dedicated Aerospace and Aeronautical Engineering graduate from Cairo University, achieving a BSc with honors and ranking fifth in my class. My thesis focused on the Attitude Determination and Control Subsystem (ADCS), showcasing strong technical foundations and research capabilities. Throughout my academic journey, I gained practical experience including a CanSat Training at the Space Systems Technology Laboratory, where I designed and tested structural components using Solidworks and Ansys. Additionally, I completed internships in aircraft maintenance at Egyptair and in CubeSat development at the Egyptian Space Agency, where I designed an ADCS for IU CubeSat and developed a ground station GUI using MATLAB.
   
@@ -29,6 +34,11 @@
   
         My comprehensive skill set, practical experiences, and dedication to continuous improvement position me as a versatile engineer ready to contribute to cutting-edge aerospace, embedded systems, and data analytics projects.
         </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img class="img-fluid" id="banner" src="/static/work.jpg" style="height: 1000px;border-radius: 4px;" >
+        </div>
+        </div>
       <h3 class="text-center mt-2 mb-4"> Open Positions </h3>
       <div>
         {%for job in jobs%}
@@ -43,16 +53,14 @@
            </div>
           </div>
             <div class="col-3">
-              <button type="button" class="btn btn-outline-primary">Apply</button>
+              <a href="https://www.google.com/" type="button" class="btn btn-outline-primary">Apply</a>
             </div>
           </div>
         {%endfor%}
       </div>
       <div class="text-center">
         <button class="btn btn-primary btn-lg mt-4">Contact me</button>
-      </div>
-      <p class="text-center mt-4">Copywrite 2024, Omar Hisham</p>
-      </div>
+    {% include 'footer.html' %}
   </body>
   
 </html>
