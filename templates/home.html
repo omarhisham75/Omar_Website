@@ -29,6 +29,25 @@
   
         My comprehensive skill set, practical experiences, and dedication to continuous improvement position me as a versatile engineer ready to contribute to cutting-edge aerospace, embedded systems, and data analytics projects.
         </p>
+      <h3 class="text-center mt-2 mb-4"> Open Positions </h3>
+      <div>
+        {%for job in jobs%}
+          <div class="border-bottom row " style="margin-bottom : 16px; padding: 8px;"" >
+            <div class="col-9">
+            <h4 style="margin-bottom: 4px; color: rgb(120,120,120) ">{{job['title']}}</h4>
+            <div><b>Location:</b> {{job['location']}}</div>
+            <div>
+              {%if 'salary' in job%}
+              <div><b>Salary:</b> {{job['salary']}}</div>
+              {%endif%}
+           </div>
+          </div>
+            <div class="col-3">
+              <button type="button" class="btn btn-outline-primary">Apply</button>
+            </div>
+          </div>
+        {%endfor%}
+      </div>
       <div class="text-center">
         <button class="btn btn-primary btn-lg mt-4">Contact me</button>
       </div>
